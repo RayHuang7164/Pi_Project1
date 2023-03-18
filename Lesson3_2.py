@@ -9,8 +9,8 @@ class Window(tk.Tk):
         label.pack(fill=tk.BOTH, expand=1, padx=100, pady=50)
 
 def main():
-    window = Window()
-    window.mainloop()
+    window = Window()  #建立實體
+    window.mainloop()  #一直重複
     
 if __name__ == "__main__":
     main()
