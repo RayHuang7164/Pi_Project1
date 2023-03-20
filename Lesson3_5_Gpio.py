@@ -16,7 +16,7 @@ class Window(tk.Tk):
         GPIO.output(25, GPIO.HIGH)
 
     def close(self):
-        print("關燈")
+        print("關燈~")
         GPIO.output(25, GPIO.LOW)
 
 
