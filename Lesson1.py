@@ -10,7 +10,7 @@ class Window(tk.Tk):
 
 def main():
     window = Window()  #建立實體
-    window.mainloop()  #一直重複g試試看
+    window.mainloop()  #一直重複g試試看~~
     
 if __name__ == "__main__":
     main()
