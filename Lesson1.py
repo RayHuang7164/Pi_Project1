@@ -9,7 +9,7 @@ class Window(tk.Tk):
         label.pack(fill=tk.BOTH, expand=1, padx=100, pady=50)
 
 def main():
-    window = Window()  #建立實體
+    window = Window()  #建立實體22
     window.mainloop()  #一直重複g試試看~~
     
 if __name__ == "__main__":
