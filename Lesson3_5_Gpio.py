@@ -12,11 +12,11 @@ class Window(tk.Tk):
         close_button.pack(side=tk.LEFT, padx=20, pady=20)
 
     def open(self):
-        print("開燈a")
+        print("開燈a~")
         GPIO.output(25, GPIO.HIGH)
 
     def close(self):
-        print("關燈b")
+        print("關燈b~")
         GPIO.output(25, GPIO.LOW)
 
 
