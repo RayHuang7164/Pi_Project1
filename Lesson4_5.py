@@ -25,6 +25,7 @@ def user_press():
             led.color=(1,0,0)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttKey}?value1=danger&value2=100'
 
+
             r = requests.get(url)
             if r.status_code == 200:
                 print("發送成功")
