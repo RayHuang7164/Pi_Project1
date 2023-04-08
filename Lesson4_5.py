@@ -21,7 +21,7 @@ def user_press():
         led.color=(1,0,0)
     else:
         print("關燈")
-        led.color=(0,0,0)
+        led.color=(0,1,0)
 
 button = Button(18)
 led = RGBLED(red=17, green=27, blue=22)
