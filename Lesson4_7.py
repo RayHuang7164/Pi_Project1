@@ -15,33 +15,57 @@ def user_press():  #按下按鈕事件
     buzzer.on()
     
     if state == True:
-        print("開燈")
+        #print("開燈")
         counter += 1
         if counter % 7 == 1:
             led.color=(0, 1, 0)  #full green
+            print(led.color)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=green&value2=1'
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color) 
         elif counter % 7 == 2:
             led.color=(0, 0, 1)  #full blue
+            print(led.color)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=blue&value2=2'
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color) 
         elif counter % 7 == 3:
             led.color=(1, 0, 1)  # magenta 紅紫
+            print(led.color)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=紅紫&value2=3'
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color) 
         elif counter % 7 == 4:
             led.color=(1, 1, 0)  # yellow
+            print(led.color)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=yellow&value2=4'
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color) 
         elif counter % 7 == 5:
-            led.color=(0, 1, 1)  # cyan  藍綠色  
+            led.color=(0, 0.5, 1)  # cyan  藍綠色 
+            print(led.color) 
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=藍綠色&value2=5'       
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color)   
         elif counter % 7 == 6:
             led.color=(1, 1, 1)  # white
+            print(led.color)
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=白&value2=6' 
+            r = requests.get(url)
+            if r.status_code == 200:
+                print(led.color)
+        
         elif counter % 7 == 0:
             led.color=(1, 0, 0)  #full red
             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=danger&value2=100'
-
             r = requests.get(url)
             if r.status_code == 200:
-                print("發送成功")
+                print(led.color)
 
     else:
         print("關燈")
