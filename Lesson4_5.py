@@ -23,8 +23,8 @@ def user_press():
             led.color=(0,0,1)
         elif counter % 3 == 0:
             led.color=(1,0,0)
-             url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttKey}?value1=danger&value2=100'
-            #url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=99&value2=100'
+            url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttKey}?value1=danger&value2=100'
+            # url = f'https://maker.ifttt.com/trigger/button_press/with/key/{private.iftttkey}?value1=99&value2=100'
 
             r = requests.get(url)
             if r.status_code == 200:
