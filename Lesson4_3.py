@@ -16,9 +16,9 @@ def user_press():
     global state
     state = not state
     if state == True:
-        print("開燈")
+        print("開燈on")
     else:
-        print("關燈")
+        print("關燈off")
 
 button = Button(18)
 
