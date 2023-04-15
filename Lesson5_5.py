@@ -12,8 +12,8 @@ while(True):
     lightvalue = round(mcp3008_light.value*1000)
     temperature = (mcp3008_temperature*1000)
     #print(lightvalue)
-    print(lightvaluetemperature)
-    
+    print(temperature)
+
     if lightvalue < 40:  #燈源不足的會觸發
         Buzzer.on()
     else:
