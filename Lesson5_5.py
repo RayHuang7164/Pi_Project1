@@ -10,7 +10,7 @@ buzzer = gpiozero.Buzzer(25) #設定25pin BZ
 while(True):    
     lightValue = round(mcp3008_light.value*1000)
     #temperature = (mcp3008_temperature.value*1000)
-    temperature = mcp3008_temperature.value* (5 / 1023.0*100)
+    temperature = mcp3008_temperature.value* (5/10.24)
     print(temperature) 
     #print(lightvalue)
     if lightValue < 40:  #燈源不足的會觸發
