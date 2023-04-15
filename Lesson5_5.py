@@ -10,7 +10,7 @@ buzzer = gpiozero.Buzzer(25) #設定25pin BZ
 while(True):    
     lightValue = round(mcp3008_light.value*1000)
     #temperature = (mcp3008_temperature.value*1000)
-    temperature = (125*mcp3008_temperature)>>8 
+    temperature = mcp3008_temperature.value* (5 / 1023.0*100)
     print(temperature)
     print("C")
     #print(lightvalue)
