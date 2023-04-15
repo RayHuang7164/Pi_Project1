@@ -1,4 +1,4 @@
-import gpiozero
+import gpiozero  #執行量測一次
 # https://gpiozero.readthedocs.io/en/stable/api_spi.html#mcp3008
 from signal import pause  #執行完就停
 from time import sleep  #執行完就停
