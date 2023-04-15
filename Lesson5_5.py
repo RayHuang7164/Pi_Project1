@@ -1,23 +1,19 @@
-import gpiozero  #增加LM35溫度量測
+   
+import gpiozero    #增加LM35溫度量測
+from time import sleep 
 # https://gpiozero.readthedocs.io/en/stable/api_spi.html#mcp3008
-from signal import pause  #執行完就停
-from time import sleep  #執行完就停
-from gpiozero import Buzzer  #增加BZ 
 
 mcp3008_light = gpiozero.MCP3008(channel=7)
-Buzzer = gpiozero.Buzzer(25) #設定25pin
 mcp3008_temperature = gpiozero.MCP3008(channel=6)
+buzzer = gpiozero.Buzzer(25) #設定25pin BZ
 
-while(True):
-    lightvalue = round(mcp3008_light.value*1000)
-    temperature = (mcp3008_temperature*1000)
-    print(lightvalue)
+while(True):    
+    lightValue = round(mcp3008_light.value*1000)
+    temperature = (mcp3008_temperature.value*1000)
     print(temperature)
-
-    if lightvalue < 40:  #燈源不足的會觸發
-        Buzzer.on()
+    #print(lightvalue)
+    if lightValue < 40:  #燈源不足的會觸發
+        buzzer.on()
     else:
-        Buzzer.off()
+        buzzer.off()
     sleep(1)
-    
-#pause()
