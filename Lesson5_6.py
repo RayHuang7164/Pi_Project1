@@ -19,16 +19,25 @@ while(True):
     print(temperature) 
     print(lightValue)
 
-    url = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A0={lightValue}'
-    response = requests.get(url)
+    #單一
+    #url = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A0={lightValue}'
+    #response = requests.get(url)
 
-    url_temperature = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&V1={temperature}'
-    response_temperature = requests.get(url_temperature)
+    #單一
+    #url_temperature = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&V1={temperature}'
+    #response_temperature = requests.get(url_temperature)
 
-    if response.ok :
-        print('Light連線成功')
+    #傳兩個數值網頁要多batch
+    url_ALL = f'https://blynk.cloud/external/api/batch/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A0={lightValue}&V1={temperature}'
+    response_ALL = requests.get(url_ALL)
 
-    if response_temperature.ok :
+    #if response.ok :
+    #    print('Light連線成功')
+
+    #if response_temperature.ok :
+    #    print('溫度連線成功')
+
+    if response_ALL.ok :
         print('溫度連線成功')
 
     if lightValue < 20:  #燈源不足的會觸發
