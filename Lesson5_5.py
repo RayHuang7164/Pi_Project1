@@ -1,4 +1,3 @@
-   
 import gpiozero    #增加LM35溫度量測
 from time import sleep 
 # https://gpiozero.readthedocs.io/en/stable/api_spi.html#mcp3008
