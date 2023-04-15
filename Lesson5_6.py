@@ -15,14 +15,14 @@ buzzer = gpiozero.Buzzer(25) #設定25pin BZ
 while(True):    
     lightValue = round(mcp3008_light.value*1000)
     #temperature = (mcp3008_temperature.value*1000)
-    temperature = round(mcp3008_temperature.value* (3.3*100),ndigits=2)
+    temperature = round(mcp3008_temperature.value* (3.3*100),ndigits=3)
     print(temperature) 
     print(lightValue)
 
     url = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A0={lightValue}'
     response = requests.get(url)
 
-    url_temperature = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A1={temperature}'
+    url_temperature = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&V1={temperature}'
     response_temperature = requests.get(url_temperature)
 
     if response.ok :
