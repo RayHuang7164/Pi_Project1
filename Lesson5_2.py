@@ -7,4 +7,4 @@ while(True):
     print(mcp3008.value)
     sleep(1)
     
-pause()
+#pause()
