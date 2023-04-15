@@ -11,8 +11,8 @@ mcp3008_temperature = gpiozero.MCP3008(channel=7)
 while(True):
     lightvalue = round(mcp3008_light.value*1000)
     temperature = (mcp3008_temperature*1000)
-    #print(lightvalue)
-    print(temperature)
+    print("light: " + lightvalue)
+    print("temperature: " + temperature)
 
     if lightvalue < 40:  #燈源不足的會觸發
         Buzzer.on()
