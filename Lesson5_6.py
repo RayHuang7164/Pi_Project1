@@ -21,8 +21,15 @@ while(True):
 
     url = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A0={lightValue}'
     response = requests.get(url)
+
+    url_temperature = f'https://blynk.cloud/external/api/update?token=95nPoiUKpcr1n4w7xzX0qDfOcJnoVFUh&A1={temperature}'
+    response_temperature = requests.get(url_temperature)
+
     if response.ok :
-        print('連線成功')
+        print('Light連線成功')
+
+    if response_temperature.ok :
+        print('溫度連線成功')
 
     if lightValue < 20:  #燈源不足的會觸發
         buzzer.on()
