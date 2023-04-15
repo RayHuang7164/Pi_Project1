@@ -6,7 +6,7 @@ from gpiozero import Buzzer  #增加BZ
 
 mcp3008_light = gpiozero.MCP3008(channel=7)
 Buzzer = gpiozero.Buzzer(25) #設定25pin
-mcp3008_temperature = gpiozero.MCP3008(channel=7)
+mcp3008_temperature = gpiozero.MCP3008(channel=6)
 
 while(True):
     lightvalue = round(mcp3008_light.value*1000)
