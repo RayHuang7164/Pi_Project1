@@ -2,8 +2,8 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-
-#https://firebase.google.com/docs/database/admin/start?hl=zh-tw&authuser=0#python
+#產生KEY  https://console.firebase.google.com/project/raspberry-1129a/settings/serviceaccounts/adminsdk
+#參考文件 https://firebase.google.com/docs/database/admin/start?hl=zh-tw&authuser=0#python
 
 cred = credentials.Certificate("raspberry-1129a-firebase-adminsdk-75033-ae5ba56285.json")
 #firebase_admin.initialize_app(cred)
